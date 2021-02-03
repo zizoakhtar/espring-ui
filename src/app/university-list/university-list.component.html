@@ -1,0 +1,31 @@
+<p>list-university works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>university List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>nom</th>
+            <th>tel</th>
+            <th>Email</th>
+            <th>Adresse</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let university of universities | async">
+            <td>{{university.nom}}</td>
+            <td>{{university.tel}}</td>
+            <td>{{university.email}}</td>
+            <td>{{university.adresse}}</td>
+            <td><button (click)="deleteUniversity(university.id)" class="btn btn-danger">Delete</button>
+                <button (click)="detailsUniversity(university.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateUniversity(university.id)" class="btn btn-danger">Update</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

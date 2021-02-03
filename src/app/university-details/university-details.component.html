@@ -1,0 +1,21 @@
+<p>university-details works!</p>
+<h2>university Details</h2> 
+
+<hr/>
+<div *ngIf="university">
+  <div>
+    <label><b>nom: </b></label> {{university.nom}}
+  </div>
+  <div>
+    <label><b>tel: </b></label> {{university.tel}}
+  </div>
+  <div>
+    <label><b>Email : </b></label> {{university.email}}
+  </div>  
+  <div>
+    <label><b>Adresse: </b></label> {{university.adresse}}
+  </div>  
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to university List</button><br>
